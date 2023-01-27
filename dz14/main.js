@@ -1,21 +1,12 @@
-// function sum (number) {
-//     if(number === 0) {
-//         return 0;     
-//     } else {
-//         return number + sum(number - 1)
-//     }
-// }
-// console.log(sum(3))
-
-// let a = 3
-
-function sum (a) {
-    if(a > 0) {
-        return a;
+function sumAdd() {
+    let x = 0;
+    function add(y) {
+        return x += + y
     }
-    function sum (b) {
-        return b;
-    }
+    return add;
 }
-console.log(sum(a = 3))
-console.log(sum(b = 5 + a))
+const sum = sumAdd();
+
+console.log(sum(3))
+console.log(sum(5))
+console.log(sum(20))
