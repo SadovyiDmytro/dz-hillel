@@ -5,4 +5,4 @@ function pow(num = prompt('Enter the "NUM"'), degree = prompt('Enter the "DEGREE
         return num;
     }
 }
-console.log(pow())
+console.log(pow());
