@@ -31,3 +31,22 @@ function removerLetters() {
     return result;
 }
 console.log(run());
+
+
+// - MW - //
+// function filterString(str, arr) {
+//     let filteredStr = '';
+//     // цикл по стрінгу
+//     for (let letter of str) {
+//         // перевіряємо чи кожна буква є у масиві
+//         if (!arr.includes(letter)) {
+//             filteredStr += letter;
+//         }
+//     }
+//     return filteredStr;
+// }
+
+// const userStr = prompt('Enter the string');
+// const userLetters = prompt('Enter letters to delete with comma')
+
+// console.log(filterString(userStr, userLetters.split(',')));
