@@ -1,0 +1,9 @@
+#tab {
+    border-collapse: collapse;
+}
+#tab td {
+    border: 1px solid black;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}

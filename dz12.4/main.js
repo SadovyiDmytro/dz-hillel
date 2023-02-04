@@ -33,7 +33,11 @@ function removerLetters() {
 console.log(run());
 
 
-// - MW - //
+/* 4. Створити функцію, яка прибирає з рядка всі символи,
+* які ми передали другим аргументом. 'func(" hello world", ['l', 'd'])'
+* поверне нам "heo wor".
+* Вихідний рядок та символи для видалення задає користувач.
+*/
 // function filterString(str, arr) {
 //     let filteredStr = '';
 //     // цикл по стрінгу

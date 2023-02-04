@@ -43,3 +43,50 @@ function doMath(x, y, znak) {
 }
  
 console.log(doMath());
+
+/*
+2. Написати функцію doMath(x, znak, y), яка отримує 3 аргументи:
+* числа x і y, рядок znak. У змінній znak може бути: +, -, *, /, %, ^ (ступінь).
+* Вивести результат математичної дії, вказаної в змінній znak.
+* Обидва числа і знак виходять від користувача.
+*/
+// const x = prompt('Введіть перше число x');
+// const y = prompt('Введіть друге число y');
+// const znak = prompt('Введіть знак +, -, *, /, %, ^ (ступінь)');
+
+// console.log(doMath(x, znak, y));
+
+// function doMath(x, znak, y) {
+//     let result;
+//     // перевірка чи введені значення не null
+//     if (x && y && znak) {
+//         // обробка кожного кейсу
+//         switch (znak) {
+//             case '+':
+//                 result = Number(x) + Number(y);
+//                 break;
+//             case '-':
+//                 result = x - y;
+//                 break;
+//             case '*':
+//                 result = x * y;
+//                 break;
+//             case '/':
+//                 result = x / y;
+//                 break;
+//             case '%':
+//                 result = x % y;
+//                 break;
+//             case '^':
+//                 result = x ** y;
+//                 break;
+//             default:
+//                 result = 'Не знаю такий знак'
+//                 break;
+//         }
+//     } else {
+//         result = 'Ви не ввели значення';
+//     }
+//     // вертаємо результат
+//     return result;
+// }
