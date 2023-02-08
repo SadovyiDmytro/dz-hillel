@@ -1,7 +1,10 @@
-const inputEl = document.getElementById('input')
+const inputEl = document.getElementById('input');
+const hidenEl = document.querySelector('#over');
+
+
 inputEl.addEventListener('focus', function() {
-    this.value = '<div>';
+    hidenEl.classList.add('show')
 });
 inputEl.addEventListener('blur', function() {
-    this.value = '';
+    hidenEl.classList.remove('show')
 });
