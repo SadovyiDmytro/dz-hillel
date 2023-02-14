@@ -1,13 +1,32 @@
-.btn {
-    border-width: 4px;
-    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
-    color: darkblue;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 700;
+#next,
+#previous {
+    width: 55px;
+    height: 80px;
+    position: absolute;
+    top: 170px;
 }
 
-.btn-nav {  
-    padding: 35px;
+#next {
+    left: 795px;
+}
+
+.slider {
+    list-style: none;
+    display: flex;
+    width: 800px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.slide-item {
+    /* display: none; */
+}
+
+.slide-item.active {
+    display: block;
+}
+
+img {
+    width: 800px;
+    height: 400px;
 }

@@ -1,14 +1,8 @@
-.btn-box {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.btn-nav {  
+.nav {  
     padding: 35px;
 }
 
-.btn {
+.nav-btn {
     width: 150px;
     color: darkblue;
     padding: 5px 15px;
@@ -20,4 +14,8 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+.nav-btn:hover {
+    color: brown;
 }
