@@ -2,7 +2,8 @@
     padding: 35px;
 }
 
-.nav-btn {
+.one-btn,
+.two-btn {
     width: 150px;
     color: darkblue;
     padding: 5px 15px;
