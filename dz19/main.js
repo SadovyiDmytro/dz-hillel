@@ -10,14 +10,14 @@ firstBtnLink.addEventListener('click', () => {
         majorLinkInt = prompt("Type: http or https protocol you need?");
         majorLink = firstBtnLink.dataset.link.constructor(majorLinkInt + '://' + firstBtnLink.dataset.link);
         if (majorLink.includes('https://') === true || majorLink.includes('http://') === true){
-        console.log('Go to:' + majorLink + '?');
+        window.location.href = majorLink
         }
         else {
             alert('ERROR: Not available protocol')
         }
     }
     else {
-        console.log(firstBtnLink.dataset.link)
+        window.location.href = firstBtnLink.dataset.link;
     }
 });
 
@@ -26,14 +26,14 @@ secBtnLink.addEventListener('click', () => {
  
     if (secBtnLink.dataset.link.includes('https://') === true) {
         console.log('Clearly go to:' + secBtnLink.dataset.link + '?')
-
+        window.location.href = secBtnLink.dataset.link
     }
     else {
         alert('ERROR: Need to type a protocol')
         secondLinkInt = prompt("Type: http or https protocol you need?");
         secondaryLink = firstBtnLink.dataset.link.constructor(secondLinkInt + '://' + firstBtnLink.dataset.link);
         if (secondaryLink.includes('https://') === true || secondaryLink.includes('http://') === true){
-        console.log('Go to:' + secondaryLink + '?');
+        window.location.href = secondaryLink;
         }
         else {
             alert('ERROR: Not available protocol')

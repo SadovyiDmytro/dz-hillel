@@ -1,13 +1,60 @@
-.btn {
-    border-width: 4px;
-    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
-    color: darkblue;
-    padding: 5px 15px;
+.menu {
+    position: fixed;
+    margin: 30px;
+    padding: 0;
+    font-size: 22px;
+}
+
+.menu-item {
+    position: relative;
     cursor: pointer;
-    font-size: 20px;
+}
+
+.menu-nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 750%;
+    padding: 0;
+}
+.menu-item.active>.menu-nav {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+#tab {
+    top: -26px;
+}
+
+#laptop {
+    top: -52px;
+}
+
+.next {
+    margin-top: -26px;
+}
+
+.last {
+    margin-top: -52px;
+}
+
+.item {
+    width: 600px;
+}
+
+.top-item {
+    margin-bottom: 10px;
     font-weight: 700;
 }
 
-.btn-nav {  
-    padding: 35px;
+.buy-btn {
+    border: 1px solid black;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    background: bisque;
+    margin-top: 30px;
 }
