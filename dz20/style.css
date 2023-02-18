@@ -26,28 +26,29 @@ li {
 }
 
 #tab {
-    top: -26px;
+    top: -74px;
 }
 
 #laptop {
-    top: -52px;
+    top: -100px;
 }
 
 .next {
-    margin-top: -26px;
+    margin-top: -74px;
 }
 
 .last {
-    margin-top: -52px;
+    margin-top: -100px;
 }
 
 .item {
     width: 600px;
+    /* margin-top: -22px; */
 }
 
 .top-item {
-    margin-bottom: 10px;
     font-weight: 700;
+    margin-top: 0;
 }
 
 .buy-btn {
