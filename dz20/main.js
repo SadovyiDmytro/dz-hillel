@@ -131,7 +131,8 @@ formOrder.addEventListener('submit', function(event) {
     const commentValue = document.getElementById('comment');
     const orderComment = document.getElementById('order-comment');
     orderComment.innerText = commentValue.value.trim() === '' ? '-' : commentValue.value.trim();
-      
+    
     formOrder.classList.remove('open')
   }
+}
 });
