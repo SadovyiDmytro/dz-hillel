@@ -14,7 +14,7 @@
     position: absolute;
     display: none;
     top: 0;
-    left: 300%;
+    left: 700%;
     padding: 0;
 }
 .menu-item.active>.menu-nav {
@@ -46,7 +46,8 @@ li {
     /* margin-top: -22px; */
 }
 
-.top-item {
+.top-item,
+.item-name {
     font-weight: 700;
     margin-top: 0;
 }
@@ -58,4 +59,95 @@ li {
     border-radius: 5px;
     background: bisque;
     margin-top: 30px;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    position: fixed;
+    font-size: 16px;
+    left: 1100px;
+    top: 320px;
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+}
+
+textarea {
+    height: 54px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    height: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.radio-pay {
+    margin-bottom: 8px;
+}
+
+.order {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 520px;
+    height: 380px;
+    position: fixed;
+    font-size: 16px;
+    left: 1085px;
+    top: 320px;
+    display: none;
+    z-index: 9999;
+    background: azure;
+}
+
+.order.open {
+    display: block;
+}
+
+.closer {
+    position: fixed;
+    left: 1619px;
+    top: 323px;
+}
+
+.closer-item {
+    width: 20px;
 }

@@ -1,0 +1,61 @@
+.menu {
+    position: fixed;
+    margin: 30px;
+    padding: 0;
+    font-size: 22px;
+}
+
+.menu-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-nav {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 300%;
+    padding: 0;
+}
+.menu-item.active>.menu-nav {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+#tab {
+    top: -74px;
+}
+
+#laptop {
+    top: -100px;
+}
+
+.next {
+    margin-top: -74px;
+}
+
+.last {
+    margin-top: -100px;
+}
+
+.item {
+    width: 600px;
+    /* margin-top: -22px; */
+}
+
+.top-item {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.buy-btn {
+    border: 1px solid black;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    background: bisque;
+    margin-top: 30px;
+}

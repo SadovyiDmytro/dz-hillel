@@ -20,7 +20,7 @@
                         <div class="menu-btn">Apple</div>
                         <ul class="menu-nav">
                             <li class="item iphone14">
-                                <p class="item-name">Apple iPhone 14 Pro</p>
+                                <p class="top-item">Apple iPhone 14 Pro</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -29,7 +29,7 @@
                         <div class="menu-btn">Google</div>
                         <ul class="menu-nav">
                             <li class="item next pixel">
-                                <p class="item-name">Google Pixel 7 Pro</p>
+                                <p class="top-item">Google Pixel 7 Pro</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -38,7 +38,7 @@
                         <div class="menu-btn">Samsung</div>
                         <ul class="menu-nav">
                             <li class="item last galaxy-phone">
-                                <p class="item-name">Samsung Galaxy S23 Ultra</p>
+                                <p class="top-item">Samsung Galaxy S23 Ultra</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -54,7 +54,7 @@
                         <div class="menu-btn">Apple</div>
                         <ul class="menu-nav">
                             <li class="item ipad">
-                                <p class="item-name">Apple iPad 12.9 Pro</p>
+                                <p class="top-item">Apple iPad 12.9 Pro</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -63,7 +63,7 @@
                         <div class="menu-btn">Microsoft</div>
                         <ul class="menu-nav">
                             <li class="item next surface">
-                                <p class="item-name">Microsoft Surface Pro 8</p>
+                                <p class="top-item">Microsoft Surface Pro 8</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -72,7 +72,7 @@
                         <div class="menu-btn">Samsung</div>
                         <ul class="menu-nav">
                             <li class="item last galaxy-tab">
-                                <p class="item-name">Samsung Galaxy Tab S8 Ultra</p>
+                                <p class="top-item">Samsung Galaxy Tab S8 Ultra</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -88,7 +88,7 @@
                         <div class="menu-btn">Apple</div>
                         <ul class="menu-nav">
                             <li class="item macbook">
-                                <p class="item-name">Apple MacBook Pro 16</p>
+                                <p class="top-item">Apple MacBook Pro 16</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -97,7 +97,7 @@
                         <div class="menu-btn">Asus</div>
                         <ul class="menu-nav">
                             <li class="item next proart">
-                                <p class="item-name">Asus ProArt Studiobook 16</p>
+                                <p class="top-item">Asus ProArt Studiobook 16</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -106,7 +106,7 @@
                         <div class="menu-btn">Lenovo</div>
                         <ul class="menu-nav">
                             <li class="item last think">
-                                <p class="item-name">Lenovo ThinkPad X1 Extreme</p>
+                                <p class="top-item">Lenovo ThinkPad X1 Extreme</p>
                                 <div class="product-info"></div>
                                 <button class="buy-btn">Buy</button>
                             </li>
@@ -116,53 +116,7 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <div class="buy-form">
-            <form class="pay-form">
-                <button disabled="disabled">X</button>
-                <label for="name">Full name:</label>
-                <input type="text" id="name" name="name"/>
-                <br />
-                <label for="city">City:</label>
-                <select id="city" name="city">
-                  <option value=""> -- Select your city -- </option>
-                  <option value="Kyiv">Kyiv</option>
-                  <option value="Kharkiv">Kharkiv</option>
-                  <option value="Lviv">Lviv</option>
-                  <option value="Odesa">Odesa</option>
-                  <option value="Dnipro">Dnipro</option>
-                </select>
-                <br /> 
-                <label for="postoffice">"Nova Poshta" Postoffice:</label>
-                <input type="text" id="postoffice" name="postoffice"/>
-                <div class="radio-pay">
-                    <label for="payment">Payment method:</label>
-                    <input type="radio" id="payment_cod" name="payment" value="cod"/>Postpaid
-                    <br>
-                    <input type="radio" id="payment_card" name="payment" value="card"/>By bank card
-                </div>
-                <label for="units">Enter the number of units you need:</label>
-                <input type="number" id="units" name="units"/>
-                <br />
-                <label for="comment">Comment to the order:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <br />
-                <input type="submit" value="Підтвердити замовлення"/>
-              </form>
-        </div>
-        <div class="order-form">
-            <div class="order">
-                <h2>Congratulations! We have received your order</h2>
-                <p><strong>Pruduct:</strong> <span id="product-name"></span></p>
-                <p><strong>Quantity:</strong> <span id="product-quantity"></span></p>
-                <p><strong>Delivery city:</strong> <span id="delivery-city"></span></p>
-                <p><strong>"Nova Poshta" postoffice:</strong> <span id="post-office"></span></p>
-                <p><strong>Bueyr</strong> <span id="buyer"></span></p>
-                <p><strong>Paymant method:</strong> <span id="payment-method"></span></p>
-                <p><strong>Your comments:</strong> <span id="order-comment"></span></p>
-              </div>
-        </div>
-    </div>
+    
     
     <script src="main.js"></script>
 </body>
