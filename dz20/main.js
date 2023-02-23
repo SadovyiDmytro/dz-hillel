@@ -32,23 +32,26 @@ productInfos.forEach(info => {
 });
 
 
-// FORM & ORDER
+/** FORM & ORDER
+ * 
+ */
 
-const formOrder = document.querySelector('.pay-form');
+const newForm = document.querySelector('.pay-form');
+const orderForm = document.querySelector('.order');
 const buyButtons = document.querySelectorAll('.buy-btn');
-const productItemName = [];
-const closerButton = document.querySelectorAll('.closer-item');
+let productItemName = [];
+const closerButton = document.querySelectorAll('.closer');
 
 buyButtons.forEach(button => {
   button.addEventListener('click', () => {
-    formOrder.classList.add('open');
-    const productNameFinder = button.closest(".productNameFinder");
-    const productName = productNameFinder.querySelector(".item-name");
-    productItemName.push(productName.textContent);
+    newForm.classList.add('open');
+    const productNameFinder = button.closest('.item');
+    const prodName = productNameFinder.querySelector('.item-name');
+    productItemName.push(prodName.textContent);
   });
 });
 
-formOrder.addEventListener('submit', function(event) {
+newForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   const fullName = document.getElementById('name');
@@ -64,6 +67,7 @@ formOrder.addEventListener('submit', function(event) {
     errorMessages.push('Please enter your name.');
   } else {
     fullName.style.borderColor = '';
+  }
 
   if (!/^[A-Za-z]+$/.test(fullName.value.trim())) {
     fullName.style.borderColor = 'red';
@@ -97,42 +101,54 @@ formOrder.addEventListener('submit', function(event) {
     unitValue.style.borderColor = '';
   }
 
-  const errorDiv = document.createElement('div');
-  errorDiv.style.color = 'red';
-  errorDiv.style.marginBottom = '10px';
+  const errorDirectory = document.createElement('div');
+  errorDirectory.style.color = 'red';
+  errorDirectory.style.marginBottom = '10px';
 
   if (errorMessages.length > 0) {
-    errorDiv.innerText = 'ERROR: ' + errorMessages.join(' ');
-    formOrder.insertBefore(errorDiv, formOrder.firstChild);
+    errorDirectory.innerText = 'ERROR: ' + errorMessages.join(' ');
+    newForm.insertBefore(errorDirectory, newForm.firstChild);
   } else {
-    errorDiv.remove();
-
-    const orderDiv = document.querySelector('.order');
-    orderDiv.classList.add('open');
-    
-    const productName = document.getElementById('product-name');
-    productName.innerText = productItemName;
-
-    const productQuantity = document.getElementById('product-quantity');
-    productQuantity.innerText = unitValue.value;
-
-    const deliveryCity = document.getElementById('delivery-city');
-    deliveryCity.innerText = cityLocation.value;
-
-    const postOffice = document.getElementById('post-office');
-    postOffice.innerText = novaPost.value;
-
-    const productBuyer = document.getElementById('buyer');
-    productBuyer.innerText = fullName.value;
-
-    const paymentMethod = document.getElementById('payment-method');
-    paymentMethod.innerText = payRadio.value === 'cod' ? 'Postpaid' : 'By bank card';
-
-    const commentValue = document.getElementById('comment');
-    const orderComment = document.getElementById('order-comment');
-    orderComment.innerText = commentValue.value.trim() === '' ? '-' : commentValue.value.trim();
-    
-    formOrder.classList.remove('open')
+    errorDirectory.remove();
   }
-}
+
+  orderForm.classList.add('open');
+    
+  const productName = document.getElementById('product-name');
+  productName.innerText = productItemName;
+
+  const productQuantity = document.getElementById('product-quantity');
+  productQuantity.innerText = unitValue.value;
+
+  const deliveryCity = document.getElementById('delivery-city');
+  deliveryCity.innerText = cityLocation.value;
+
+  const postOffice = document.getElementById('post-office');
+  postOffice.innerText = novaPost.value;
+
+  const productBuyer = document.getElementById('buyer');
+  productBuyer.innerText = fullName.value;
+
+  const paymentMethod = document.getElementById('payment-method');
+  paymentMethod.innerText = payRadio.value === 'cod' ? 'Postpaid' : 'By bank card';
+
+  const commentValue = document.getElementById('comment');
+  const orderComment = document.getElementById('order-comment');
+  orderComment.innerText = commentValue.value.trim() === '' ? '-' : commentValue.value.trim();
+  
+  newForm.classList.remove('open')
+  
+  function closeOrderForm() {
+    newForm.classList.remove('open');
+    orderForm.classList.remove('open');
+
+    productItemName = [];
+  }
+  closerButton.forEach(button => {
+    button.addEventListener('click', () => {
+      closeOrderForm();
+    });
+  });
 });
+
+

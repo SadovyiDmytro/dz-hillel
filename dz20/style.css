@@ -71,6 +71,7 @@ form {
     left: 1100px;
     top: 320px;
     display: none;
+    background: lightgoldenrodyellow;
 }
 
 .open {
@@ -142,12 +143,20 @@ input[type="submit"]:hover {
     display: block;
 }
 
-.closer {
+.new-forms,
+.new-orders {
     position: fixed;
     left: 1619px;
     top: 323px;
+    background-image: url('images/close-icon.png');
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    border: none;
 }
 
-.closer-item {
-    width: 20px;
+.new-orders {
+    left: 1621px;
+    top: 325px;
 }
