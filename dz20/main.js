@@ -14,6 +14,8 @@ const object = {
   color: 'Black'
 };
 
+
+
 const productInfos = document.querySelectorAll('.product-info');
 
 productInfos.forEach(info => {
@@ -52,6 +54,7 @@ shopCloser.addEventListener('click', function() {
 });
 
 function displayOrders() {
+  tasksList.innerHTML = '';
   orders.forEach((order, index) => {
     const orderDetails = document.createElement('li');
     orderDetails.innerHTML = 
@@ -96,6 +99,7 @@ buyButtons.forEach(button => {
   });
 });
 
+
 newForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -104,6 +108,58 @@ newForm.addEventListener('submit', function(event) {
   const novaPost = document.getElementById('postoffice');
   const payRadio = document.querySelector('input[name="payment"]:checked');
   const unitValue = document.getElementById('units');
+
+  const errorMessages = [];
+
+  if (fullName.value.trim() === '') {
+    fullName.style.borderColor = 'red';
+    errorMessages.push('Please enter your name.');
+  } else {
+    fullName.style.borderColor = '';
+  }
+
+  if (!/^[A-Za-z]+$/.test(fullName.value.trim()) && !/^[А-Яа-яІіЇїЄєҐґ']+$/.test(fullName.value.trim())) {
+    fullName.style.borderColor = 'red';
+    errorMessages.push('Please enter your name correctly (A-Za-z).');
+  } else {
+    fullName.style.borderColor = '';
+  }
+
+  if (cityLocation.value === '') {
+    cityLocation.style.borderColor = 'red';
+    errorMessages.push('Please select your city.');
+  } else {
+    cityLocation.style.borderColor = '';
+  }
+
+  if (novaPost.value.trim() === '') {
+    novaPost.style.borderColor = 'red';
+    errorMessages.push('Please enter your "Nova Poshta" postoffice.');
+  } else {
+    novaPost.style.borderColor = '';
+  }
+
+  if (!payRadio) {
+    errorMessages.push('Please select a payment method.');
+  }
+
+  if (unitValue.value === '' || unitValue.value <= 0) {
+    unitValue.style.borderColor = 'red';
+    errorMessages.push('Please enter a valid number of units.');
+  } else {
+    unitValue.style.borderColor = '';
+  }
+
+  const errorDirectory = document.createElement('div');
+  errorDirectory.style.color = 'red';
+  errorDirectory.style.marginBottom = '10px';
+
+  if (errorMessages.length > 0) {
+    errorDirectory.innerText = 'ERROR: ' + errorMessages.join(' ');
+    newForm.insertBefore(errorDirectory, newForm.firstChild);
+  } else {
+    errorDirectory.remove();
+  }
 
   const productName = document.getElementById('product-name');
   productName.innerText = productItemName;
