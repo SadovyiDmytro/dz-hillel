@@ -39,11 +39,11 @@ let productItemPrice = object.price;
 const closerButton = document.querySelectorAll('.closer');
 const tasksList = document.querySelector('.tasks');
 const orders = JSON.parse(localStorage.getItem('orders')) || [];
-const btnCheck = document.querySelector('.btn-check');
+const shopOpener = document.querySelector('.btn-check');
 const shopBox = document.querySelector('.shop-box');
 const shopCloser = document.querySelector('.shop-closer');
 
-btnCheck.addEventListener('click', function() {
+shopOpener.addEventListener('click', function() {
   shopBox.parentElement.classList.add('on');
 });
 
@@ -51,7 +51,7 @@ shopCloser.addEventListener('click', function() {
   shopBox.parentElement.classList.remove('on');
 });
 
-function displayOrders() {
+function taskOrders() {
   tasksList.innerHTML = '';
   orders.forEach((order, index) => {
     const orderDetails = document.createElement('li');
@@ -87,7 +87,7 @@ function displayOrders() {
   });
 };
 
-displayOrders();
+taskOrders();
 
 buyButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -190,9 +190,8 @@ newForm.addEventListener('submit', function(event) {
   function closeOrderForm() {
     newForm.classList.remove('open');
     orderForm.classList.remove('open');
-
-    productItemName = [];
   }
+  
   closerButton.forEach(button => {
     button.addEventListener('click', () => {
       closeOrderForm();
@@ -212,8 +211,8 @@ newForm.addEventListener('submit', function(event) {
 
   orders.push(orderData);
   localStorage.setItem('orders', JSON.stringify(orders));
-  
-  displayOrders();
+
+  taskOrders();
 });
 
 
