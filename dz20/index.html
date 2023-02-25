@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <dis class="header">
+        <div class="head">
+            <button class="btn-check"></button>
+        </div>
+    </dis>
     <div class="main-menu">
         <ul class="menu">
             <li class="menu-item">
@@ -116,7 +120,7 @@
             </li>
         </ul>
     </div>
-    <div class="container">
+    <div class="container-form">
         <div class="buy-form">
             <form class="pay-form">
                 <button class="closer new-forms"></button>
@@ -125,12 +129,12 @@
                 <br />
                 <label for="city">City:</label>
                 <select id="city" name="city">
-                  <option value=""> -- Select your city -- </option>
-                  <option value="Kyiv">Kyiv</option>
-                  <option value="Kharkiv">Kharkiv</option>
-                  <option value="Lviv">Lviv</option>
-                  <option value="Odesa">Odesa</option>
-                  <option value="Dnipro">Dnipro</option>
+                <option value=""> -- Select your city -- </option>
+                <option value="Kyiv">Kyiv</option>
+                <option value="Kharkiv">Kharkiv</option>
+                <option value="Lviv">Lviv</option>
+                <option value="Odesa">Odesa</option>
+                <option value="Dnipro">Dnipro</option>
                 </select>
                 <br /> 
                 <label for="postoffice">"Nova Poshta" Postoffice:</label>
@@ -148,7 +152,7 @@
                 <textarea id="comment" name="comment"></textarea>
                 <br />
                 <input type="submit" value="Підтвердити замовлення"/>
-              </form>
+            </form>
         </div>
         <div class="order-form">
             <div class="order">
@@ -160,11 +164,21 @@
                 <p><strong>"Nova Poshta" postoffice:</strong> <span id="post-office"></span></p>
                 <p><strong>Bueyr</strong> <span id="buyer"></span></p>
                 <p><strong>Paymant method:</strong> <span id="payment-method"></span></p>
+                <p><strong>Price:</strong> <span id="order-price"></span></p>
                 <p><strong>Your comments:</strong> <span id="order-comment"></span></p>
-              </div>
+            </div>
         </div>
     </div>
-    
+    <div class="shop">
+        <div class="shop-box">
+            <h1>Your Orders</h1>
+            
+            <ul class="tasks"></ul>
+            </div>
+        </div>
+    </div>
+
     <script src="main.js"></script>
+    <!-- <script src="next.js"></script> -->
 </body>
 </html>
