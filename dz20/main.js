@@ -14,8 +14,6 @@ const object = {
   color: 'Black'
 };
 
-
-
 const productInfos = document.querySelectorAll('.product-info');
 
 productInfos.forEach(info => {
@@ -87,7 +85,8 @@ function displayOrders() {
       console.log('The li element was clicked!');
     }
   });
-}
+};
+
 displayOrders();
 
 buyButtons.forEach(button => {
@@ -98,7 +97,6 @@ buyButtons.forEach(button => {
       productItemName = prodName.textContent;
   });
 });
-
 
 newForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -214,6 +212,7 @@ newForm.addEventListener('submit', function(event) {
 
   orders.push(orderData);
   localStorage.setItem('orders', JSON.stringify(orders));
+  
   displayOrders();
 });
 
