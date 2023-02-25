@@ -34,14 +34,25 @@ productInfos.forEach(info => {
 const newForm = document.querySelector('.pay-form');
 const orderForm = document.querySelector('.order');
 const buyButtons = document.querySelectorAll('.buy-btn');
-let productItemName = [];
+let productItemName = '';
 let productItemPrice = object.price;
 const closerButton = document.querySelectorAll('.closer');
 const tasksList = document.querySelector('.tasks');
 const orders = JSON.parse(localStorage.getItem('orders')) || [];
+const btnCheck = document.querySelector('.btn-check');
+const shopBox = document.querySelector('.shop-box');
+const shopCloser = document.querySelector('.shop-closer');
+
+btnCheck.addEventListener('click', function() {
+  shopBox.parentElement.classList.add('on');
+});
+
+shopCloser.addEventListener('click', function() {
+  shopBox.parentElement.classList.remove('on');
+});
 
 function displayOrders() {
-  orders.forEach(order => {
+  orders.forEach((order, index) => {
     const orderDetails = document.createElement('li');
     orderDetails.innerHTML = 
       `
@@ -52,18 +63,36 @@ function displayOrders() {
       <strong>Product:</strong> ${order.productPrice}
       <br>
       <strong>Date:</strong> ${new Date().getFullYear()} ${new Date().getMonth()} ${new Date().getDay()}
+      <br>
+      <span class="delete-btn"></span>
       `;
     tasksList.appendChild(orderDetails);
+
+    const deleteBtn = orderDetails.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+      const productName = order.productName;
+      if (confirm(`Are you sure you want to delete the order for ${productName}?`)) {
+        orders.splice(index, 1);
+        localStorage.setItem('orders', JSON.stringify(orders));
+        orderDetails.remove();
+      }
+    });
+  });
+
+  tasksList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'LI') {
+      console.log('The li element was clicked!');
+    }
   });
 }
-
+displayOrders();
 
 buyButtons.forEach(button => {
   button.addEventListener('click', () => {
       newForm.classList.add('open');
       const productNameFinder = button.closest('.item');
       const prodName = productNameFinder.querySelector('.item-name');
-      productItemName.push(prodName.textContent);
+      productItemName = prodName.textContent;
   });
 });
 
@@ -126,12 +155,12 @@ newForm.addEventListener('submit', function(event) {
     paymentMethod: payRadio.value === 'cod' ? 'Postpaid' : 'By bank card',
     orderComment: commentValue.value.trim() === '' ? '-' : commentValue.value.trim(),
   };
+
   orders.push(orderData);
   localStorage.setItem('orders', JSON.stringify(orders));
   displayOrders();
-
 });
-displayOrders();
+
 
 
 
