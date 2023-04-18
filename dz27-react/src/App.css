@@ -4,6 +4,7 @@
 
 .left-panel {
   margin: 0px 100px 0 70px;
+  cursor: pointer;
 }
 
 .right-panel {
