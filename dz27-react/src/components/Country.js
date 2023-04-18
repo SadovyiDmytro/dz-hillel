@@ -7,7 +7,7 @@ const Country = ({ country }) => {
       <div className="country">
         <img className='flag-image' src={country.flags.png} alt={`${name} flag`} />
         <div className='info-card'>
-          <h3>{country.name.common}</h3>
+          <h3 className='card-title'>{country.name.common}</h3>
           <p>Population: {population}</p>
           <p>Capital: {capital}</p>
         </div>

@@ -1,6 +1,6 @@
 .country {
     margin: 0 20px 20px;
-    background: lightgoldenrodyellow;
+    background: whitesmoke;
     height: 340px;
     border-radius: 10px;
 }
@@ -9,8 +9,13 @@
     width: 415px;
     height: 215px;
     border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid lightslategrey;
 }
 
 .info-card {
     padding-left: 10px;
+}
+
+.card-title {
+    margin: 10px 0;
 }
