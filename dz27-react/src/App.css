@@ -1,0 +1,21 @@
+.main-panel {
+  display: flex;
+}
+
+.left-panel {
+  margin: 0px 100px 0 70px;
+}
+
+.right-panel {
+  border-left: 1px solid grey;
+  height: 100%;
+}
+
+.countries-panel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.continet-panel {
+  margin-left: 20px;
+}

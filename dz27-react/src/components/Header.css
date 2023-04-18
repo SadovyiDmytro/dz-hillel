@@ -1,0 +1,34 @@
+header {
+    height: 100px;
+    background: lightgrey;;
+    margin: 0 auto;
+    /* display: flex; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav {
+    list-style: none;
+    display: flex;
+    padding: 50px 40px 0 0;
+    font-size: 16px;
+    font-variant: small-caps;
+}
+
+.nav-item {
+    padding-right: 15px;
+}
+
+.logo {
+    width: 70px;
+    margin: 25px 0 0 20px;
+}
+
+.title {
+    margin-top: -7px;
+    font-variant: small-caps;
+    font-size: 32px;
+}
