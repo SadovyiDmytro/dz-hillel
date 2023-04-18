@@ -1,5 +1,7 @@
 .main-panel {
   display: flex;
+  background: lightgray;
+  min-height: 100vh;
 }
 
 .left-panel {
