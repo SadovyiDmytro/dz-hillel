@@ -1,50 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
+import { toggleTodo, addTodo } from './actions';
+import './App.css';
 
-const SmileyList = () => {
-  const [smileys, setSmileys] = useState([
-    { id: 1, name: '😊', count: 0 },
-    { id: 2, name: '😂', count: 0 },
-    { id: 3, name: '😍', count: 0 },
-  ]);
-  const [winner, setWinner] = useState(null);
+function App() {
+  const todos = useSelector(state => state.todos);
+  const dispatch = useDispatch();
 
-  const handleSmileyClick = (id) => {
-    setSmileys((prevSmileys) =>
-      prevSmileys.map((smiley) =>
-        smiley.id === id ? { ...smiley, count: smiley.count + 1 } : smiley
-      )
-    );
-  };
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    dispatch({ type: 'SET_TODOS', payload: storedTodos });
+  }, [dispatch]);
 
-  const handleShowResults = () => {
-    let maxCount = 0;
-    let winnerIndex = null;
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
-    for (let i = 0; i < smileys.length; i++) {
-      if (smileys[i].count > maxCount) {
-        maxCount = smileys[i].count;
-        winnerIndex = i;
-      }
-    }
+  function handleToggleTodo(index) {
+    dispatch(toggleTodo(index));
+  }
 
-    setWinner(smileys[winnerIndex]);
-  };
+  function handleAddTodo(task) {
+    dispatch(addTodo(task));
+  }
 
   return (
-    <div>
-      {smileys.map((smiley) => (
-        <div key={smiley.id} onClick={() => handleSmileyClick(smiley.id)}>
-          {smiley.name} - {smiley.count}
-        </div>
-      ))}
-      <button onClick={handleShowResults}>Show Results</button>
-      {winner && (
-        <div>
-          The winner is {winner.name} with {winner.count} votes!
-        </div>
-      )}
+    <div className='main'>
+      <h1>ToDo List</h1>
+      <TodoList todos={todos} handleToggleTodo={handleToggleTodo} />
+      <TodoForm handleAddTodo={handleAddTodo} />
     </div>
   );
-};
+}
 
-export default SmileyList;
+export default App;

@@ -1,0 +1,10 @@
+.local-form {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: white;
+}

@@ -1,0 +1,22 @@
+.albom-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-name {
+    width: 600px;
+    height: 60px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    margin: 5px;
+}
+
+.item-link {
+    display: flex;
+    flex-direction: row-reverse;
+}

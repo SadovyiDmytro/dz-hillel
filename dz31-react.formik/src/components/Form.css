@@ -1,0 +1,41 @@
+.form-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-btn {
+    width: 140px;
+    height: 25px;
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+.local-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.local-bank {
+    list-style: none;
+    padding: 0;
+}
+
+.local-item {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 330px;
+    padding: 10px;
+    background-color: azure;
+}
+
+p {
+    margin: 0;
+}
