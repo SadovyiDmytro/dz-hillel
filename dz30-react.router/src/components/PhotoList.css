@@ -1,4 +1,14 @@
-.photo-list {
+.photo-title {
     display: flex;
     justify-content: center;
+}
+
+.photo-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    border-radius: 75px;
+    margin: 0px 5px 0px 5px;
 }

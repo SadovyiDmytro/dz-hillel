@@ -11,7 +11,6 @@ function App() {
         <Route path="/" element={<UserList />} />
         <Route path="/albums" element={<AlbumList />} />
         <Route path="/albums/:albumId/photos" element={<PhotoList />} />
-        {/* <Route path="/albums/" element={<PhotoList />} /> */}
       </Routes>
     </Router>
   );
