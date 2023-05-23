@@ -1,6 +1,5 @@
 import { Typography, Table, Image } from 'antd';
 import { useEffect, useState } from 'react';
-import './Products.css';
 
 function Products() {
   const [products, setProducts] = useState([]);
