@@ -83,35 +83,37 @@ function DashboardChart() {
     );
 }
 
-function RecentOrders({data}) {
+function RecentOrders({ data }) {
     return (
-        <>
-            <Typography.Title level={4}>Recent Orders</Typography.Title>
-            <Table
-                columns={[
-                    {
-                        title: 'Title',
-                        dataIndex: 'title'
-                    },
-                    {
-                        title: 'Quantity',
-                        dataIndex: 'quantity'
-                    },
-                    {
-                        title: 'Price',
-                        dataIndex: 'price'
-                    },
-                    {
-                        title: 'Total Price',
-                        dataIndex: 'total'
-                    }
-                ]}
-                pagination={false}
-                dataSource={data.products}
-                />
-        </>
+      <>
+        <Typography.Title level={4}>Recent Orders</Typography.Title>
+        <Table
+          columns={[
+            {
+              title: 'Title',
+              dataIndex: 'title'
+            },
+            {
+              title: 'Quantity',
+              dataIndex: 'quantity'
+            },
+            {
+              title: 'Price',
+              dataIndex: 'price'
+            },
+            {
+              title: 'Total Price',
+              dataIndex: 'total'
+            }
+          ]}
+          pagination={false}
+          dataSource={data.products}
+          rowKey={(record) => record.id}
+        />
+      </>
     );
-}
+  }
+  
 
 function Dashboard() {
     const [recentOrders, setResentOrders] = useState([]);
